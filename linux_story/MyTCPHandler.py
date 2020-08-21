@@ -6,10 +6,10 @@
 # Send requests to server
 
 import json
-import SocketServer
+import socketserver
 
 
-class MyTCPHandler(SocketServer.BaseRequestHandler):
+class MyTCPHandler(socketserver.BaseRequestHandler):
     """
     The RequestHandler class for our server.
 
@@ -20,7 +20,7 @@ class MyTCPHandler(SocketServer.BaseRequestHandler):
 
     def __init__(self, arg1, arg2, arg3):
         self.continue_server = True
-        SocketServer.BaseRequestHandler.__init__(self, arg1, arg2, arg3)
+        socketserver.BaseRequestHandler.__init__(self, arg1, arg2, arg3)
 
     def handle(self):
 

@@ -5,7 +5,7 @@
 #
 
 from linux_story.common import get_story_file
-from chest import chest
+from .chest import chest
 
 
 cage = {
@@ -19,12 +19,12 @@ cage = {
         {
             "challenge": 44,
             "step": 5,
-            "permissions": 0500
+            "permissions": 0o500
         },
         {
             "challenge": 45,
             "step": 6,
-            "permissions": 0755
+            "permissions": 0o755
         }
     ],
     "children": [
@@ -116,17 +116,17 @@ rabbithole = {
         {
             "challenge": 40,
             "step": 1,
-            "permissions": 0755
+            "permissions": 0o755
         },
         {
             "challenge": 43,
             "step": 1,
-            "permissions": 0000
+            "permissions": 0o000
         },
         {
             "challenge": 44,
             "step": 5,
-            "permissions": 0755
+            "permissions": 0o755
         }
     ]
 }

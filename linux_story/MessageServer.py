@@ -6,8 +6,8 @@
 # Controls communicating between the GUI and the terminal
 import socket
 import threading
-import Queue
-import SocketServer
+import queue
+import socketserver
 import time
 import traceback
 
@@ -22,8 +22,8 @@ class MessageServer:
     def __init__(self, queue, window):
         self.__window = window
         self.__server_busy = False
-        SocketServer.TCPServer.allow_reuse_address = True
-        self.__server = SocketServer.TCPServer((MessageServer.HOST, MessageServer.PORT), MyTCPHandler)
+        socketserver.TCPServer.allow_reuse_address = True
+        self.__server = socketserver.TCPServer((MessageServer.HOST, MessageServer.PORT), MyTCPHandler)
         self.__server.queue = queue
         self.__is_busy = False
         self.__exiting = False
@@ -58,7 +58,7 @@ class MessageServer:
 
             self.__is_busy = False
 
-        except Queue.Empty:
+        except queue.Empty:
             return True
         except Exception:
             logger.error('Unexpected error in MainWindow: check_queue: - [{}]'.format(traceback.format_exc()))

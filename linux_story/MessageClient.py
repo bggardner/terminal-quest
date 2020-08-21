@@ -54,7 +54,7 @@ class MessageClient:
 
         try:
             sock.connect((MessageClient.HOST, MessageClient.PORT))
-            sock.sendall(json_data)
+            sock.sendall(json_data.encode())
             received1 = sock.recv(4096)
             self.__server_busy = (received1 == 'busy')
             received2 = sock.recv(4096)

@@ -6,8 +6,8 @@
 
 
 from linux_story.common import get_story_file
-from shed_shop import shed_shop
-from library import library
+from .shed_shop import shed_shop
+from .library import library
 
 
 restaurant = {

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # setup.py
 #
@@ -64,8 +64,8 @@ setup(name='Linux Story',
       author='Team Kano',
       author_email='dev@kano.me',
       url='https://github.com/KanoComputing/linux-tutorial',
-      packages=['linux_story'],
-      package_dir={'linux_story': 'linux_story'},
+      packages=['kano', 'kano_profile', 'linux_story'],
+      #package_dir={'linux_story': 'linux_story'},
       scripts=['bin/linux-story', 'bin/linux-story-gui'],
       package_data={
           'linux_story': story + ascii_assets + gtk3 + file_creation

@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # linux-story
 #
@@ -19,8 +19,8 @@ if __name__ == '__main__' and __package__ is None:
     else:
         LOCALE_PATH = '/usr/share/locale'
 
-import kano_i18n.init
-kano_i18n.init.install('terminal-quest', LOCALE_PATH)
+import gettext
+gettext.translation('terminal-quest', localedir=LOCALE_PATH, fallback=True).install()
 
 from kano_profile.apps import load_app_state_variable, save_app_state_variable
 

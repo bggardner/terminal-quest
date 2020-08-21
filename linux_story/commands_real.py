@@ -9,7 +9,7 @@
 import os
 import subprocess
 
-from helper_functions import colour_file_dir, debugger
+from .helper_functions import colour_file_dir, debugger
 from linux_story.common import tq_file_system, fake_home_dir
 from linux_story.sound_manager import SoundManager
 
@@ -31,7 +31,7 @@ def ls(real_loc, line, has_access=True):
     '''
 
     if not has_access:
-        print "ls: cannot open directory {}: Permission denied".format(line)
+        print("ls: cannot open directory {}: Permission denied".format(line))
         return
 
     new_loc = real_loc
@@ -70,11 +70,11 @@ def ls(real_loc, line, has_access=True):
     # filename
     if err:
         err = err.replace(tq_file_system, '~')
-        print err
+        print(err)
         return err
 
     # Need to filter output
-    files = orig_output.split('\n')
+    files = orig_output.decode().split('\n')
     coloured_files = []
     output = " ".join(files)
 
@@ -99,7 +99,7 @@ def ls(real_loc, line, has_access=True):
         else:
             coloured_output = " ".join(coloured_files)
 
-    print coloured_output
+    print(coloured_output)
     return output
 
 
@@ -125,19 +125,20 @@ def shell_command(real_loc, line, command_word=""):
     # run the command
     p = subprocess.Popen(args, cwd=real_loc,
                          stdout=subprocess.PIPE,
-                         stderr=subprocess.PIPE)
+                         stderr=subprocess.PIPE,
+                         text=True)
     stdout, stderr = p.communicate()
 
     if stderr:
-        print stderr.strip().replace(fake_home_dir, '~')
+        print(stderr.strip().replace(fake_home_dir, '~'))
         return False
 
     if stdout:
         if command_word == "cat":
-            print stdout
+            print(stdout)
 
         else:
-            print stdout.strip()
+            print(stdout.strip())
 
     # notifying the SoundManager about the command that was run
     sounds_manager.on_command_run(args)
@@ -166,10 +167,10 @@ def launch_application(real_path, line, command_word=""):
     stdout, stderr = p.communicate()
 
     if stdout:
-        print stdout.strip()
+        print(stdout.strip())
 
     if stderr:
-        print stderr.strip()
+        print(stderr.strip())
 
 
 def turn_abs_path_to_real_loc(path):
@@ -211,10 +212,10 @@ def nano(real_path, line):
     stdout, stderr = p.communicate()
 
     if stdout:
-        print stdout.strip()
+        print(stdout.strip())
 
     if stderr:
-        print stderr.strip()
+        print(stderr.strip())
 
 
 def run_executable(real_path, line):
@@ -240,7 +241,7 @@ def run_executable(real_path, line):
     sounds_manager.on_command_run([script_name])
 
     if stdout:
-        print stdout.strip()
+        print(stdout.strip())
 
     if stderr:
-        print stderr.strip()
+        print(stderr.strip())

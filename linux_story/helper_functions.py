@@ -6,6 +6,7 @@
 # Helper functions used across the system.
 
 
+from functools import reduce
 import os
 import os.path
 import gettext
@@ -33,7 +34,7 @@ def debugger(text):
     """
 
     if False:
-        print text
+        print(text)
 
 
 def get_script_cmd(string, real_path):
@@ -203,7 +204,7 @@ def print_method_module(method):
         if name == '__main__':
             filename = sys.modules[self.__module__].__file__
             name = os.path.splitext(os.path.basename(filename))[0]
-        print name
+        print(name)
         return method(self)
     return printer
 
@@ -328,7 +329,7 @@ def wrap_in_box(lines):
     max_characters = reduce(reduction, lines, 0)
     outer_line = " {} ".format("-" * (max_characters + 2))
 
-    new_lines = map(format_line, lines)
+    new_lines = list(map(format_line, lines))
 
     return [outer_line] + new_lines + [outer_line + "\n"]
 

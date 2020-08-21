@@ -6,8 +6,8 @@
 
 
 from linux_story.common import get_story_file
-from hidden_shelter import hidden_shelter
-from east import east
+from .hidden_shelter import hidden_shelter
+from .east import east
 
 
 grumpy_man_hurt = {

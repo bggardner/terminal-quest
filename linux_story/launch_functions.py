@@ -46,10 +46,10 @@ def get_step_class(challenge_number, step_number):
     """
 
     if challenge_number == 0:
-        module_name = "story.challenges.introduction"
+        module_name = "linux_story.story.challenges.introduction"
         step_class_name = "Step1"
     else:
-        module_name = "story.challenges.challenge_{}".format(challenge_number)
+        module_name = "linux_story.story.challenges.challenge_{}".format(challenge_number)
         step_class_name = "Step{}".format(step_number)
 
     try:
@@ -58,10 +58,11 @@ def get_step_class(challenge_number, step_number):
             globals(),
             locals(),
             [step_class_name],
-            -1
+            0
         )
     except ImportError as detail:
-        print 'Import error = {}, module_name = {}'.format(detail, module_name)
+        raise detail
+        print('Import error = {}, module_name = {}'.format(detail, module_name))
         sys.exit(0)
     else:
         return getattr(module, step_class_name)

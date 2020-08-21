@@ -4,9 +4,9 @@
 # License: http://www.gnu.org/licenses/gpl-2.0.txt GNU GPL v2
 #
 
-from cave import cave
-from clearing import clearing
-from rabbithole import rabbithole
+from .cave import cave
+from .clearing import clearing
+from .rabbithole import rabbithole
 from linux_story.common import get_story_file
 
 

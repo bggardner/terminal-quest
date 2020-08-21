@@ -184,7 +184,7 @@ class MainWindow(Gtk.Window):
             )
 
         command = (
-            "python " +
+            "python3 " +
             filepath + " " +
             challenge_number + " " +
             step_number
@@ -268,4 +268,3 @@ class MainWindow(Gtk.Window):
 
         revert_to_default_permissions(tq_file_system)
         Gtk.main_quit()
-

@@ -87,7 +87,7 @@ class Storybook(Gtk.TextView):
         lines = self.__parse_string(string)
         unstyled_string = self.__compose_string(lines)
 
-        for i in xrange(len(lines)):
+        for i in range(len(lines)):
             line = lines[i]
 
             # if we are printing a new word, notify the sound manager
@@ -95,7 +95,7 @@ class Storybook(Gtk.TextView):
                 self.sounds_manager.on_typing_story_text(unstyled_string)
             else:
                 if unstyled_string[i - 1] in s.whitespace and \
-                   unstyled_string[i] in s.letters:
+                   unstyled_string[i] in s.ascii_letters:
 
                     self.sounds_manager.on_typing_story_text(unstyled_string[i:])
 

@@ -54,8 +54,17 @@ def get_max_challenge_number():
             kano-profile.
     '''
 
-    # Hardcoded path, perhaps change it later
-    path = "/usr/share/kano-profile/rules/app_profiles.json"
+    dir_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+    rules_local = os.path.join(dir_path, 'rules')
+    rules_usr = '/usr/share/kano-profile/rules/'
+    if os.path.exists(rules_local):
+        rules_dir = rules_local
+    elif os.path.exists(rules_usr):
+        rules_dir = rules_usr
+    else:
+        logger.warn("Neither local nor usr rules found!")
+
+    path = os.path.join(rules_dir, 'app_profiles.json')
     f = open(path)
     str_data = f.read()
     f.close()
