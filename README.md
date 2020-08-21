@@ -11,6 +11,20 @@ linux-story is installed by default on Kano OS, and is provided as a debian pack
  - Package name: linux-story
  - Executable: /usr/bin/linux-story-gui
 
+## Standalone
+```
+sudo apt update
+sudo apt upgrade
+sudo apt install gettext gir1.2-vte-2.90               
+git clone https://github.com/bggardner/terminal-quest.git
+cd terminal-quest
+cd po
+make
+cd ..
+pip3 install .
+bin/linux-story-gui
+```
+
 # How Terminal Quest works
 For a more detailed breakdown, read the [development wiki page](https://github.com/KanoComputing/linux-tutorial/wiki/Development).
 

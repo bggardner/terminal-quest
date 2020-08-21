@@ -65,7 +65,7 @@ setup(name='Linux Story',
       author_email='dev@kano.me',
       url='https://github.com/KanoComputing/linux-tutorial',
       packages=['kano', 'kano_profile', 'linux_story'],
-      #package_dir={'linux_story': 'linux_story'},
+      install_requires=['docopt'],
       scripts=['bin/linux-story', 'bin/linux-story-gui'],
       package_data={
           'linux_story': story + ascii_assets + gtk3 + file_creation
