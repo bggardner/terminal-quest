@@ -11,11 +11,12 @@ linux-story is installed by default on Kano OS, and is provided as a debian pack
  - Package name: linux-story
  - Executable: /usr/bin/linux-story-gui
 
-## Standalone
+## Standalone on Raspberry Pi (2 or later)
+This fork adapted the original repository to run as a standalone application (no dependency on any Kano repositories/packages or Python 2), but should still run on Kano OS.
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install gettext gir1.2-vte-2.90               
+sudo apt install gettext gir1.2-vte-2.90 python3 python3-gi python3-pip
 git clone https://github.com/bggardner/terminal-quest.git
 cd terminal-quest
 cd po
