@@ -11,12 +11,27 @@ linux-story is installed by default on Kano OS, and is provided as a debian pack
  - Package name: linux-story
  - Executable: /usr/bin/linux-story-gui
 
-## Standalone on Raspberry Pi (2 or later)
+## Raspberry Pi OS
+### Kano Repositories
+This method allows you to run Terminal Quest without Kano OS, but requires installing many (stale and unnecessary) packages, and relies on Python 2.  Be sure to answer "no" if asked to replace any configuration files.
+```
+sudo apt-mark hold lxmenu-data
+wget -qO - http://repo.kano.me/archive-stretch/repo.gpg.key | sudo apt-key add -
+echo "deb http://repo.kano.me/archive-stretch/ release main" | sudo tee /etc/apt/sources.list.d/kano.list
+sudo apt update
+sudo apt upgrade
+wget http://security.debian.org/debian-security/pool/updates/main/p/pillow/python-imaging_4.0.0-4+deb9u2_all.deb
+sudo dpkg -i python-imaging_4.0.0-4+deb9u2_all.deb
+sudo apt install --no-install-recommends linux-story python-docopt python-mercury python2-mercury
+linux-story-gui
+```
+
+### Standalone
 This fork adapted the original repository to run as a standalone application (no dependency on any Kano repositories/packages or Python 2), but should still run on Kano OS.
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install gettext gir1.2-vte-2.90 python3 python3-gi python3-pip
+sudo apt install gettext gir1.2-vte-2.90 python3-gi python3-pip
 git clone https://github.com/bggardner/terminal-quest.git
 cd terminal-quest
 cd po
