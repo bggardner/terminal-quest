@@ -113,7 +113,7 @@ def read_file_contents_as_lines(path):
 
 def ensure_dir(directory):
     if not os.path.exists(directory):
-        os.makdirs(directory)
+        os.makedirs(directory)
 
 def chown_path(path, usr=None, group=None):
     user_unsudoed = get_user_unsudoed()
