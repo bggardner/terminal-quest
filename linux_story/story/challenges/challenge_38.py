@@ -88,7 +88,7 @@ class Step3(StepTemplateChmod):
 
     def next(self):
         path = generate_real_path("~/woods/clearing/house")
-        os.chmod(path, 0755)
+        os.chmod(path, 0o0755)
         return 38, 4
 
 

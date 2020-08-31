@@ -38,7 +38,7 @@ class Step1(StepTemplateRm):
         {
             "path": "~/town/east/library/rabbithole/Swordmaster",
             "contents": get_story_file("swordmaster"),
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file"
         }
     ]
@@ -148,73 +148,73 @@ class Step5(StepTemplateRm):
             "path": "~/woods/thicket/rabbithole/bell",
             "type": "file",
             "contents": get_story_file("bell"),
-            "permissions": 0644
+            "permissions": 0o0644
         },
         {
             "path": "~/woods/thicket/rabbithole/Rabbit",
             "type": "file",
             "contents": get_story_file("Rabbit"),
-            "permissions": 0644
+            "permissions": 0o0644
         },
         {
             "path": "~/woods/thicket/rabbithole/cage/Mum",
             "type": "file",
             "contents": get_story_file("Mum"),
-            "permissions": 0644
+            "permissions": 0o0644
         },
         {
             "path": "~/woods/thicket/rabbithole/cage/Dad",
             "type": "file",
             "contents": get_story_file("Dad"),
-            "permissions": 0644
+            "permissions": 0o0644
         },
         {
             "path": "~/woods/thicket/rabbithole/cage/dog",
             "type": "file",
             "contents": get_story_file("dog"),
-            "permissions": 0644
+            "permissions": 0o0644
         },
         {
             "path": "~/woods/thicket/rabbithole/cage/Edith",
             "type": "file",
             "contents": get_story_file("Edith"),
-            "permissions": 0644
+            "permissions": 0o0644
         },
         {
             "path": "~/woods/thicket/rabbithole/cage/Edward",
             "type": "file",
             "contents": get_story_file("Edward"),
-            "permissions": 0644
+            "permissions": 0o0644
         },
         {
             "path": "~/woods/thicket/rabbithole/cage/grumpy-man",
             "type": "file",
             "contents": get_story_file("grumpy-man-fixed"),
-            "permissions": 0644
+            "permissions": 0o0644
         },
         {
             "path": "~/woods/thicket/rabbithole/cage/Mayor",
             "type": "file",
             "contents": get_story_file("Mayor"),
-            "permissions": 0644
+            "permissions": 0o0644
         },
         {
             "path": "~/woods/thicket/rabbithole/cage/young-girl",
             "type": "file",
             "contents": get_story_file("young-girl"),
-            "permissions": 0644
+            "permissions": 0o0644
         },
         {
             "path": "~/woods/thicket/rabbithole/cage/little-boy",
             "type": "file",
             "contents": get_story_file("little-boy"),
-            "permissions": 0644
+            "permissions": 0o0644
         },
         {
             "path": "~/woods/thicket/rabbithole/cage/Swordmaster",
             "contents": get_story_file("swordmaster-without-sword"),
             "type": "file",
-            "permissions": 0644
+            "permissions": 0o0644
         },
         {
             "path": "~/woods/thicket/rabbithole/cage/Bernard",

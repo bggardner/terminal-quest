@@ -49,4 +49,4 @@ def mkdir(real_path):
     # check if directory exists
     if os.path.exists(real_path):
         return "error", "whatever the mkdir error message is here"
-    os.mkdir(real_path, 0755)
+    os.mkdir(real_path, 0o0755)

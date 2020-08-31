@@ -132,8 +132,8 @@ def route_between_paths(start_path, end_path):
     start_diff = start_split[1]
     end_diff = end_split[1]
 
-    start_dirs = filter(None, start_diff.split("/"))
-    end_dirs = filter(None, end_diff.split("/"))
+    start_dirs = list(filter(None, start_diff.split("/")))
+    end_dirs = list(filter(None, end_diff.split("/")))
 
     a_dest_path = start_path
     dest_paths = []

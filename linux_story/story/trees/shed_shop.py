@@ -76,7 +76,7 @@ shed_shop = {
                 {
                     "challenge": 23,
                     "step": 1,
-                    "permissions": 0o755
+                    "permissions": 0o0755
                 }
             ]
         },
@@ -92,7 +92,7 @@ shed_shop = {
                 {
                     "challenge": 23,
                     "step": 1,
-                    "permissions": 0o755
+                    "permissions": 0o0755
                 },
                 {
                     "challenge": 27,
@@ -113,7 +113,7 @@ shed_shop = {
                 {
                     "challenge": 27,
                     "step": 3,
-                    "permissions": 0o755
+                    "permissions": 0o0755
                 }
             ]
         },
@@ -144,7 +144,7 @@ shed_shop = {
                 {
                     "name": "photocopier.sh",
                     "contents": get_story_file("photocopier.sh"),
-                    "permissions": 0o755,
+                    "permissions": 0o0755,
                     "challenges": [
                         {
                             "challenge": 23,

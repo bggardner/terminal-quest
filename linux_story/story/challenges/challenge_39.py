@@ -148,7 +148,7 @@ class Step5(StepTemplateChmod):
         {
             "contents": get_story_file("note_swordsmaster-house"),
             "path": "~/woods/clearing/house/note",
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file"
         }
     ]

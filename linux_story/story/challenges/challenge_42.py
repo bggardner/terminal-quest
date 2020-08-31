@@ -36,7 +36,7 @@ class Step1(StepTemplateChmod):
         {
             "path": "~/town/east/library/Rabbit",
             "contents": get_story_file("Rabbit"),
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file"
         }
     ]
@@ -95,13 +95,13 @@ class Step3(StepTemplateChmod):
         {
             "path": "~/town/east/library/private-section/chest/scroll",
             "contents": get_story_file("scroll"),
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file"
         },
         {
             "path": "~/town/east/library/private-section/chest/torn-note",
             "contents": get_story_file("torn-note"),
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file"
         }
     ]
@@ -133,7 +133,7 @@ class Step4(StepTemplateChmod):
         {
             "path": "~/town/east/library/private-section/Rabbit",
             "contents": get_story_file("Rabbit"),
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file"
         }
     ]

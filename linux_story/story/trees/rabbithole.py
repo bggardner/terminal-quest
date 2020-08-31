@@ -19,12 +19,12 @@ cage = {
         {
             "challenge": 44,
             "step": 5,
-            "permissions": 0o500
+            "permissions": 0o0500
         },
         {
             "challenge": 45,
             "step": 6,
-            "permissions": 0o755
+            "permissions": 0o0755
         }
     ],
     "children": [
@@ -116,17 +116,17 @@ rabbithole = {
         {
             "challenge": 40,
             "step": 1,
-            "permissions": 0o755
+            "permissions": 0o0755
         },
         {
             "challenge": 43,
             "step": 1,
-            "permissions": 0o000
+            "permissions": 0o0000
         },
         {
             "challenge": 44,
             "step": 5,
-            "permissions": 0o755
+            "permissions": 0o0755
         }
     ]
 }

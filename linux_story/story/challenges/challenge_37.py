@@ -34,13 +34,13 @@ class Step1(StepTemplateChmod):
         {
             "path": "~/woods/cave/chest/answer",
             "type": "file",
-            "permissions": 0644,
+            "permissions": 0o0644,
             "contents": get_story_file("answer-cave")
         },
         {
             "path": "~/woods/cave/chest/riddle",
             "type": "file",
-            "permissions": 0644,
+            "permissions": 0o0644,
             "contents": get_story_file("riddle-cave")
         }
     ]

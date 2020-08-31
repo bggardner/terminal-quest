@@ -31,55 +31,55 @@ class Step1(StepTemplateNano):
     file_list = [
         {
             "path": "~/woods/cave/sign",
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file",
             "contents": get_story_file("sign_cave")
         },
 
         {
             "path": "~/woods/cave/dark-room",
-            "permissions": 0300,
+            "permissions": 0o0300,
             "type": "directory"
         },
         {
             "path": "~/woods/cave/dark-room/sign",
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file",
             "contents": get_story_file("x-sign")
         },
 
         {
             "path": "~/woods/cave/cage",
-            "permissions": 0500,
+            "permissions": 0o0500,
             "type": "directory"
         },
         {
             "path": "~/woods/cave/cage/bird",
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file",
             "contents": get_story_file("bird")
         },
         {
             "path": "~/woods/cave/cage/sign",
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file",
             "contents": get_story_file("r-sign")
         },
 
         {
             "path": "~/woods/cave/locked-room/",
-            "permissions": 0600,
+            "permissions": 0o0600,
             "type": "directory"
         },
         {
             "path": "~/woods/cave/locked-room/lighter",
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file",
             "contents": get_story_file("lighter")
         },
         {
             "path": "~/woods/cave/locked-room/sign",
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file",
             "contents": get_story_file("w-sign"),
         }

@@ -412,7 +412,14 @@ def get_date_now():
 
 # shell.py
 import os
+import signal
 import subprocess
+
+def restore_signals():
+    signals = ('SIGPIPE', 'SIGXFZ', 'SIGXFSZ')
+    for sig in signals:
+        if hasattr(signal, sig):
+            signal.signal(getattr(signal, sig), signal.SIG_DFL)
 
 def run_cmd(cmd, localised=False, unsudo=False):
     '''

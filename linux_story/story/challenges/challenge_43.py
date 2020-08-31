@@ -40,7 +40,7 @@ class Step1(StepTemplateChmod):
         {
             "path": "~/town/east/library/private-section/Swordmaster",
             "contents": get_story_file("swordmaster"),
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file"
         }
     ]
@@ -122,7 +122,7 @@ class Step2(StepTemplateChmod):
             "path": "~/town/east/library/private-section/sword",
             "contents": get_story_file("RM-sword"),
             "type": "file",
-            "permissions": 0644
+            "permissions": 0o0644
         }
     ]
     dark_theme = True

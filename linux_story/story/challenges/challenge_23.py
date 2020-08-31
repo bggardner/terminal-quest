@@ -33,11 +33,11 @@ class Step1(StepTemplateMkdir):
         {"path": "~/town/east/shed-shop/Bernard"},
         {
             "path": "~/town/east/shed-shop/best-shed-maker-in-the-world.sh",
-            "permissions": 0755
+            "permissions": 0o0755
         },
         {
             "path": "~/town/east/shed-shop/best-horn-in-the-world.sh",
-            "permissions": 0755,
+            "permissions": 0o0755,
             "contents": get_story_file("best-horn-in-the-world-incorrect.sh")
         },
         {"path": "~/town/east/shed-shop/basement/photocopier.sh"},
@@ -47,7 +47,7 @@ class Step1(StepTemplateMkdir):
         {
             "path": "~/town/east/library/private-section",
             "type": "directory",
-            "permissions": 0000
+            "permissions": 0o0000
         },
         {"path": "~/town/east/restaurant/.cellar/Clara"}
     ]

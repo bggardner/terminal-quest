@@ -28,13 +28,13 @@ class FileTree:
     KEY_EXISTS = "exists"
     TYPE_DIR = "directory"
     TYPE_FILE = "file"
-    DEFAULT_DIR_PERMISSIONS = 0o755
-    DEFAULT_FILE_PERMISSIONS = 0o644
+    DEFAULT_DIR_PERMISSIONS = 0o0755
+    DEFAULT_FILE_PERMISSIONS = 0o0644
 
     def __init__(self, tree, end_dir):
         self.__tree = tree
         self.__end_dir = end_dir
-        self.__create_dir(end_dir, 0o755)
+        self.__create_dir(end_dir, 0o0755)
 
     def parse_complete(self, challenge, step):
         self.__clear_old_tree()
@@ -157,7 +157,7 @@ class FileTree:
         if bool(mode & stat.S_IWUSR) and bool(mode & stat.S_IXUSR):
             return False
         else:
-            os.chmod(parent_dir, 0o755)
+            os.chmod(parent_dir, 0o0755)
             return True
 
     def __get_permissions(self, challenge_data, item_type):
@@ -214,11 +214,11 @@ def revert_to_default_permissions(filesystem):
 
 
 def get_oct_permissions(path):
-    return oct(os.stat(path).st_mode & 0o777)
+    return oct(os.stat(path).st_mode & 0o0777)
 
 
 def get_int_permissions(path):
-    return int(os.stat(path).st_mode & 0o777)
+    return int(os.stat(path).st_mode & 0o0777)
 
 
 def delete_items(items):
@@ -251,8 +251,8 @@ def modify_file_tree(items):
         if f["type"] == "directory":
             f["contents"] = ""
             if "permissions" not in f:
-                f["permissions"] = 0o755
+                f["permissions"] = 0o0755
         elif "permissions" not in f:
-                f["permissions"] = 0o644
+                f["permissions"] = 0o0644
 
         file_tree.create_item(f["type"], f["path"], f["permissions"], f["contents"])

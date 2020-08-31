@@ -13,12 +13,12 @@ dark_room = {
         {
             "challenge": 32,
             "step": 1,
-            "permissions": 0o300
+            "permissions": 0o0300
         },
         {
             "challenge": 35,
             "step": 1,
-            "permissions": 0o700
+            "permissions": 0o0700
         }
     ],
     "children": [
@@ -35,12 +35,12 @@ cage_room = {
         {
             "challenge": 32,
             "step": 1,
-            "permissions": 0o500
+            "permissions": 0o0500
         },
         {
             "challenge": 35,
             "step": 6,
-            "permissions": 0o700
+            "permissions": 0o0700
         }
     ],
     "children": [
@@ -79,12 +79,12 @@ locked_room = {
         {
             "challenge": 32,
             "step": 1,
-            "permissions": 0o600
+            "permissions": 0o0600
         },
         {
             "challenge": 35,
             "step": 4,
-            "permissions": 0o700
+            "permissions": 0o0700
         }
     ],
     "children": [
@@ -117,7 +117,7 @@ locked_room = {
                 {
                     "challenge": 36,
                     "step": 4,
-                    "permissions": 0o755
+                    "permissions": 0o0755
                 }
             ]
         }
@@ -145,12 +145,12 @@ chest = {
         {
             "challenge": 37,
             "step": 2,
-            "permissions": 0o000
+            "permissions": 0o0000
         },
         {
             "challenge": 37,
             "step": 5,
-            "permissions": 0o700
+            "permissions": 0o0700
         }
     ]
 }

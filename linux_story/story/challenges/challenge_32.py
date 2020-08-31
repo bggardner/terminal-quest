@@ -29,12 +29,12 @@ class Step1(StepTemplateNano):
     file_list = [
         {
             "path": "~/woods/clearing/house",
-            "permissions": 0000,
+            "permissions": 0o0000,
             "type": "directory"
         },
         {
             "path": "~/woods/clearing/signpost",
-            "permissions": 0644,
+            "permissions": 0o0644,
             "type": "file",
             "contents": get_story_file("signpost")
         },

@@ -32,12 +32,12 @@ library = {
                 {
                     "challenge": 0,
                     "step": 1,
-                    "permissions": 0o000
+                    "permissions": 0o0000
                 },
                 {
                     "challenge": 42,
                     "step": 3,
-                    "permissions": 0o755
+                    "permissions": 0o0755
                 }
             ],
             "children": [
