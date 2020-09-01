@@ -90,8 +90,8 @@ class Step2(StepTemplateMv):
 
         else:
             # print a message in the terminal to show that it failed
-            print _("If you do not add the basket at the end of the command, " +\
-                    "you will rename the items!")
+            print(_("If you do not add the basket at the end of the command, " +\
+                    "you will rename the items!"))
 
         return should_block
 
@@ -289,7 +289,7 @@ class Step7(StepTemplateMv):
                 else:
                     hint += _("\n{{gb:Check on}} {{yb:1}} {{gb:other}}")
         else:
-            hint = _("{{rb:Use}} {{yb:%s}} {{rb:to progress.}}") % self.allowed_commands.keys()[0]
+            hint = _("{{rb:Use}} {{yb:%s}} {{rb:to progress.}}") % list(self.allowed_commands.keys())[0]
 
         self.send_hint(hint)
 

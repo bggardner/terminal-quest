@@ -208,13 +208,13 @@ class Storybook(Gtk.TextView):
         text = get_ascii_art(filename)
         text_lines = text.splitlines()
         leading_newlines = len(text_lines)
-        for i in xrange(leading_newlines, -1, -1):
+        for i in range(leading_newlines, -1, -1):
             self.clear()
 
-            for j in xrange(i):
+            for j in range(i):
                 self.print_text('')
 
-            for j in xrange(leading_newlines - i):
+            for j in range(leading_newlines - i):
                 self.print_text(text_lines[j])
 
             time.sleep(0.2)

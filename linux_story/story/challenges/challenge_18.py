@@ -215,7 +215,7 @@ class Step7(StepTemplateEcho):
         else:
             if not self.hints:
                 self.hints = [
-                    _("{{rb:Use}} {{yb:%s}} {{rb:to progress.}}") % self.all_commands.keys()[0]
+                    _("{{rb:Use}} {{yb:%s}} {{rb:to progress.}}") % list(self.all_commands.keys())[0]
                 ]
             self.send_stored_hint()
             self.hints.pop()

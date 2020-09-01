@@ -231,7 +231,7 @@ class Step5(StepTemplateRm):
     ]
 
     def _run_after_text(self):
-        modify_permissions("~/woods/thicket/rabbithole/cage", 0500)
+        modify_permissions("~/woods/thicket/rabbithole/cage", 0o0500)
 
     def block_command(self, line):
         return unblock_cd_commands(line)

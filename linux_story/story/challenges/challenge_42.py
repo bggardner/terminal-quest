@@ -145,7 +145,7 @@ class Step4(StepTemplateChmod):
     def block_command(self, line):
         if line == "cat chest/scroll":
             self.set_last_user_input(line)
-            print _("The Rabbit snatched the chest away!")
+            print(_("The Rabbit snatched the chest away!"))
             return True
         return StepTemplateChmod.block_command(self, line)
 

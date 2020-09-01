@@ -31,7 +31,7 @@ class TerminalSudo(TerminalRm):
             self._client.send_hint("\n{{gb:Type a password. You won't be able to see what you type.}}")
         elif counter == 3:
             self.passed = False
-            print "sudo: 3 incorrect password attempts"
+            print("sudo: 3 incorrect password attempts")
             return
 
         user = getpass.getuser()
@@ -39,7 +39,7 @@ class TerminalSudo(TerminalRm):
 
         # For now hard code the password?
         if password != "kano":
-            print "Sorry, try again."
+            print("Sorry, try again.")
             counter += 1
             if password == "" and counter < 3:
                 self._client.send_hint("\n{{rb:You didn't type anything! You need to type a password!}}")
@@ -51,4 +51,4 @@ class TerminalSudo(TerminalRm):
 
 
 def printf(text):
-    print text
+    print(text)

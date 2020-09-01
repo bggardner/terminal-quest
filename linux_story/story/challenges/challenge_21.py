@@ -333,7 +333,7 @@ class Step9(StepTemplateMkdir):
                     _("\n{{gb:Well done! Move one more in the}} {{yb:.shelter}}")
                 )
             elif len(self.all_commands) > 0:
-                hint = _("\n{{gb:Well done! Move %s more.}}")\
+                hint = _("\n{{gb:Well done! Move %d more.}}")\
                     % str(len(self.all_commands) / 2)
             else:
                 hint = _("\n{{gb:Press}} {{ob:Enter}} {{gb:to continue}}")

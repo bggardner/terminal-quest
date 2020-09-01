@@ -41,7 +41,7 @@ class Step1(StepTemplateRm):
 
     def block_command(self, line):
         if line == "rm Rabbit":
-            print _("The rabbit dodged the attack!")
+            print(_("The rabbit dodged the attack!"))
             return True
         return StepTemplateRm.block_command(self, line)
 
@@ -284,7 +284,7 @@ class Step7(StepTemplateSudo):
 
         # check through list of commands
         self.hints = [
-            _("{{rb:Use}} {{yb:%s}} {{rb:to progress.}}") % self.all_commands.keys()[0]
+            _("{{rb:Use}} {{yb:%s}} {{rb:to progress.}}") % list(self.all_commands.keys())[0]
         ]
 
         end_dir_validated = self.get_fake_path() == self.end_dir

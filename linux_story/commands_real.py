@@ -63,7 +63,8 @@ def ls(real_loc, line, has_access=True):
     debugger("args = {}".format(args))
     p = subprocess.Popen(args, cwd=real_loc,
                          stdout=subprocess.PIPE,
-                         stderr=subprocess.PIPE)
+                         stderr=subprocess.PIPE,
+                         text=True)
     orig_output, err = p.communicate()
 
     # The error will need to be edited if it contains info about the edited
@@ -74,7 +75,7 @@ def ls(real_loc, line, has_access=True):
         return err
 
     # Need to filter output
-    files = orig_output.decode().split('\n')
+    files = orig_output.split('\n')
     coloured_files = []
     output = " ".join(files)
 

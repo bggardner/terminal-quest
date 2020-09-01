@@ -37,7 +37,7 @@ cd terminal-quest
 cd po
 make
 cd ..
-pip3 install .
+pip3 install -e .
 bin/linux-story-gui
 ```
 

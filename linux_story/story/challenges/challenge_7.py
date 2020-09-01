@@ -74,7 +74,7 @@ class Step3(StepTemplateCd):
 
         # check through list of commands
         self.hints = [
-            _("{{rb:Use}} {{yb:%s}} {{rb:to progress.}}") % self.all_commands.keys()[0]
+            _("{{rb:Use}} {{yb:%s}} {{rb:to progress.}}") % list(self.all_commands.keys())[0]
         ]
 
         end_dir_validated = self.get_fake_path() == self.end_dir

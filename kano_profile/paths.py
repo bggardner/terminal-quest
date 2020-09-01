@@ -26,6 +26,7 @@ elif os.path.exists(rules_usr):
     rules_dir = rules_usr
 else:
     logger.warn("Neither local nor usr rules found!")
+    logger.warn(str(dir_path))
 
 # bin path
 bin_local = os.path.join(dir_path, 'bin')

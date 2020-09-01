@@ -71,7 +71,7 @@ class Step1(StepTemplateCd):
             self.send_hint(hint)
 
         else:
-            self.send_hint(_("{{rb:Use}} {{yb:%s}} {{rb:to progress.}}") % self.all_commands.keys()[0])
+            self.send_hint(_("{{rb:Use}} {{yb:%s}} {{rb:to progress.}}") % list(self.all_commands.keys())[0])
 
         # Don't pass unless the user has emptied self.all_commands
         return False
