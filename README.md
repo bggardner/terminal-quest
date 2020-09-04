@@ -1,4 +1,3 @@
-
 # Terminal Quest
 
 This is the source code for the Terminal Quest app available for Kano OS.
@@ -59,3 +58,13 @@ Options:
 ```
 
 Make sure your environment exposes `PYTHONIOENCODING=UTF-8` for correct i18n translations throughout the adventure.
+
+# See Also
+* [flappy-judoka](https://github.com/bggardner/flappy-judoka)
+* [kano-draw](https://github.com/bggardner/kano-draw)
+* [kano-pong](https://github.com/bggardner/kano-pong)
+* [make-minecraft](https://github.com/bggardner/make-minecraft)
+* [make-pong](https://github.com/bggardner/make-pong)
+* [make-snake](https://github.com/bggardner/make-snake)
+* [terminal-quest](https://github.com/bggardner/terminal-quest)
+
